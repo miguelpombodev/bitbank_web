@@ -11,10 +11,10 @@ const HeaderMain: React.FC = () => (
         <HeaderContent>
             <img src={BBLogo} alt="logo" />
             <HeaderOptions>
-                <HeaderItem>Home</HeaderItem>
-                <HeaderItem>Digital Account</HeaderItem>
-                <HeaderItem>About Us</HeaderItem>
-                <HeaderItem>Wallets</HeaderItem>
+                <HeaderItem><a href='#'>Home</a></HeaderItem>
+                <HeaderItem><a href='#'>Digital Account</a></HeaderItem>
+                <HeaderItem><a href='#'>About Us</a></HeaderItem>
+                <HeaderItem><a href='#'>Wallets</a></HeaderItem>
             </HeaderOptions>
         </HeaderContent>
 

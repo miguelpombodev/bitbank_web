@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { shade } from 'polished';
 
 export const Header = styled.nav`
     display: flex;
@@ -30,6 +31,29 @@ export const HeaderItem = styled.li`
     font-size: 1.3em;
    
     margin-right: 1em;    
+
+    a {
+        color: #000;
+        text-decoration: none;
+
+        &:after {
+        content: '';
+        display: block;
+        margin: auto;
+        height: 2px;
+        width: 0px;
+        transition: width .3s ease, background-color .5s ease;
+        }      
+        
+        &:hover:after {
+          width: 100%;
+          background: ${shade(0.2, '#62e37b')};
+        }
+        
+        &:hover {
+            color: ${shade(0.2, '#62e37b')}
+        }
+    }    
 `;
 
 export const AuthOptions = styled.div`
@@ -60,5 +84,9 @@ export const SignUpButton = styled.button`
     border-radius: 6.25rem;
     color: #fff;
     cursor: pointer;
+
+    &:hover {
+        background-color: ${shade(0.2, '#62e37b')}
+    }
     
 `

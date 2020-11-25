@@ -1,7 +1,11 @@
 import React from 'react';
 
+import Header from '../../components/Header'
+
 const Main: React.FC = () => (
-    <h1>Main</h1>
+    <>
+        <Header />
+    </>
 )
 
 export default Main;
