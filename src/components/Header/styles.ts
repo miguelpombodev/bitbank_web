@@ -1,7 +1,9 @@
 import styled from 'styled-components';
 import { shade } from 'polished';
+import { Link } from 'react-router-dom'
 
 export const Header = styled.nav`
+    background-color: #fff;
     display: flex;
     height:90px;
     border-bottom: 1px solid #ccc;
@@ -47,12 +49,17 @@ export const HeaderItem = styled.li`
         
         &:hover:after {
           width: 100%;
-          background: ${shade(0.2, '#62e37b')};
+          background: ${shade(0.2, '#62e37b')};          
         }
         
         &:hover {
             color: ${shade(0.2, '#62e37b')}
         }
+
+        &:active:after{
+            color: ${shade(0.2, '#62e37b')}
+        }
+
     }    
 `;
 
@@ -63,7 +70,7 @@ export const AuthOptions = styled.div`
     height: 100%;
 `
 
-export const LogInLink = styled.a`
+export const LogInLink = styled(Link)`
     margin-right: 1em;
     display: flex;
     align-items: center;
@@ -71,6 +78,11 @@ export const LogInLink = styled.a`
     color:  #62e37b;
     text-decoration: none;
     width: 3.6em;
+    transition: .3s;
+
+    &:hover {
+        color: ${shade(0.3, '#62e37b')}
+    }
 
 `;
 
@@ -84,6 +96,7 @@ export const SignUpButton = styled.button`
     border-radius: 6.25rem;
     color: #fff;
     cursor: pointer;
+    transition: .3s;
 
     &:hover {
         background-color: ${shade(0.2, '#62e37b')}
