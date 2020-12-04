@@ -1,7 +1,14 @@
 import styled from 'styled-components'
 import { shade } from 'polished'
+import { Field } from 'formik'
 
 import sideBackground from '../../assets/sideImage.jpg'
+
+import { InputStyle } from '../../components/Input/styles'
+
+export const Input = styled(Field)`
+    ${InputStyle}
+`
 
 export const SideImage = styled.div`
     flex: 1;

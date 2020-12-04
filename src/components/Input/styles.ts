@@ -1,6 +1,5 @@
-import styled from 'styled-components';
 
-export const InputStyle = styled.input`
+export const InputStyle = `
     border: none;
     border-bottom: 1px #4eb562 solid;
     width: 350px; 
